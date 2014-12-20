@@ -11,12 +11,12 @@ Note that normal Hitchwiki takes care of installing this extension.
 
 Clone under `extensions`:
 ```bash
-git clone https://github.com/Hitchwiki/HitchwikiVector-extension.git extensions/Hitchwiki
+git clone https://github.com/Hitchwiki/HitchwikiVector-extension.git extensions/HitchwikiVector
 ```
 
 Add to LocalSettings.php
 ```php
-require_once "$IP/extensions/Hitchwiki/Hitchwiki.php";
+require_once "$IP/extensions/HitchwikiVector/HitchwikiVector.php";
 ```
 
 [Contact us](http://hitchwiki.org/contact).

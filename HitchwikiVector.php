@@ -6,22 +6,22 @@
 
 $wgHWResourceBoilerplate = array(
 	'localBasePath' =>  __DIR__,
-	'remoteExtPath' => 'Hitchwiki',
+	'remoteExtPath' => 'HitchwikiVector',
 );
 
 $wgExtensionCredits['skin'][] = array(
 	'author' => array( 'Mikael Korpela', 'Rémi Claude' ),
-	'description' => 'Hitchwiki.org template changes to Vector template.',
+	'description' => "Hitchwiki skin extension to turn MediaWiki's Vector skin awesomly orange.",
 	'descriptionmsg' => 'hitchwiki-desc',
-	'name' => 'Hitchwiki',
+	'name' => 'HitchwikiVector',
 	'path' => __FILE__,
-	'url' => 'https://github.com/hitchwiki/hitchwiki/',
+	'url' => 'https://github.com/Hitchwiki/HitchwikiVector-extension',
 	'license-name' => 'MIT'
 );
 
-$wgAutoloadClasses['HitchwikiHooks'] = __DIR__ . '/Hitchwiki.hooks.php';
+$wgAutoloadClasses['HitchwikiHooks'] = __DIR__ . '/HitchwikiVector.hooks.php';
 
-$wgMessagesDirs['Hitchwiki'] = __DIR__ . '/i18n';
+$wgMessagesDirs['HitchwikiVector'] = __DIR__ . '/i18n';
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
 
