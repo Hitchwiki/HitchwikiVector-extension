@@ -1,16 +1,13 @@
 {
-  "name": "HWMap",
+  "name": "HitchwikiVector",
   "type": "mediawiki-extension",
-  "description": "Hitchwiki.org Map extension for MediaWiki. Requires Semantic MediaWiki.",
+  "description": "Hitchwiki skin extension to turn MediaWiki's Vector skin awesomly orange.",
   "keywords": [
     "Hitchwiki",
-    "Hitchhiking",
-    "Map",
     "MediaWiki",
-    "SMW",
-    "Semantic MediaWiki"
+    "Vector"
   ],
-  "homepage": "https://github.com/Hitchwiki/HWMap-extension",
+  "homepage": "https://github.com/Hitchwiki/HitchwikiVector-extension",
   "license": "MIT",
   "authors": [
     {
@@ -20,11 +17,7 @@
   ],
   "support": {
     "irc": "irc://irc.freenode.net/hitchhiking",
-    "issues": "https://github.com/Hitchwiki/HWMap-extension/issues",
-    "source": "https://github.com/Hitchwiki/HWMap-extension"
-  },
-  "scripts": {
-    "post-update-cmd": "bower update",
-    "post-install-cmd": "bower install"
+    "issues": "https://github.com/Hitchwiki/HitchwikiVector-extension/issues",
+    "source": "https://github.com/Hitchwiki/HitchwikiVector-extension"
   }
 }
