@@ -1,0 +1,73 @@
+// Hitchwiki
+
+@import "mixins";
+@import 'variables';
+
+/*
+ * Color theme
+ */
+html, body {
+	background: #eee;
+}
+
+div#mw-panel {
+	width: 9.5em;
+	background: #eee;
+}
+
+.mw-body {
+	border-color: @hw-orange-border;
+}
+
+#p-search,
+#p-logo {
+	background-color: @hw-orange;
+	color: @hw-orange-text;
+}
+
+#p-search {
+  #simpleSearch {
+    border-bottom-color: @hw-orange-border;
+  }
+	#searchInput {
+		color: @hw-orange-text;
+	}
+	#searchButton {
+
+	}
+}
+
+#p-search .searchButton,
+div.vectorTabs, div#content {
+	border-left-color: @hw-orange-border;
+}
+
+.mw-scrolled {
+	#p-logo {
+		border-bottom-color: @hw-orange-border;
+	}
+}
+
+
+/*
+ * @todo: placeholders for Search input...
+
+// WebKit browsers
+::-webkit-input-placeholder {
+color:    brighten(@hw-orange-text, 20%);
+}
+// Mozilla Firefox 4 to 18
+:-moz-placeholder {
+	color:    brighten(@hw-orange-text, 20%);
+	opacity:  1;
+}
+// Mozilla Firefox 19+
+::-moz-placeholder {
+	color:    brighten(@hw-orange-text, 20%);
+	opacity:  1;
+}
+// Internet Explorer 10+
+:-ms-input-placeholder {
+	color:    brighten(@hw-orange-text, 20%);
+}
+*/
