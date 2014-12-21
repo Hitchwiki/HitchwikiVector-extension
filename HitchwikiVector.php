@@ -43,3 +43,4 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 ) );
 
 $wgHooks['BeforePageDisplay'][] = 'HitchwikiHooks::onBeforePageDisplay';
+$wgHooks['BeforePageDisplay'][] = 'HitchwikiHooks::modifyFooterIcons';

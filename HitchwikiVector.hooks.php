@@ -15,12 +15,26 @@ class HitchwikiHooks {
 			return true;
 	  }
 
+		// Add our modules
 		$modules = array(
 			'skins.vector.hitchwiki'
 		);
-
 		$out->addModules( $modules );
 
+		return true;
+	}
+
+	/**
+	* Remove footer icons for MW and SMW
+	* Handler for BeforePageDisplay
+	* @param OutputPage $out
+	* @param Skin $skin
+	* @return bool
+	*/
+	static function modifyFooterIcons( &$out, &$skin ) {
+		global $wgFooterIcons;
+		unset($wgFooterIcons["poweredby"]["mediawiki"]);
+		unset($wgFooterIcons["poweredby"]["semanticmediawiki"]);
 		return true;
 	}
 
