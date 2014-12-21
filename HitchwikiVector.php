@@ -37,7 +37,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		// Other ensures this loads after the Vector skin styles
 		'group' => 'other',
-		//'position' => 'top',
+		//'position' => 'bottom',
 	),
 
 ) );

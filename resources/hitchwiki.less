@@ -42,11 +42,46 @@ div.vectorTabs, div#content {
 	border-left-color: @hw-orange-border;
 }
 
-.mw-scrolled {
-	#p-logo {
-		border-bottom-color: @hw-orange-border;
+/*
+ * Logo
+ */
+#p-logo {
+	.background-image('images/hitchwiki-logo.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	//.background-image-svg("images/@{name}.svg", 'images/@{name}.png');
+
+	// This will break the scrolling logo of VectorBeta Winter theme
+	position: fixed;
+	top: 0;
+	height: @header-height;
+	border-bottom: 1px solid @hw-orange-border;
+
+	// Original icon was here
+	// Consider removing image with JS so we could keep the link?
+	a {
+		display: none;
 	}
 }
+// This will break the scrolling logo of VectorBeta Winter theme
+div#mw-panel {
+	top: @header-height;
+	padding-top: 1em;
+}
+.mw-scrolled {
+  #p-logo {
+		border-bottom-color: @hw-orange-border;
+  }
+}
+
+
+/*
+ * Sidebar
+ */
+/*
+.icon("");
+.background-icon("");
+*/
 
 
 /*

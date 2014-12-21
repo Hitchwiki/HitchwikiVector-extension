@@ -1,9 +1,7 @@
 # HitchwikiVector extension for MediaWiki
-Hitchwiki skin extension to turn MediaWiki's Vector skin awesomly orange.
+_Hitchwiki skin extension to turn MediaWiki's Vector skin awesomly orange._
 
-Internal project extension to use at ([Hitchwiki.org](http://hitchwiki.org).
-
-Part of [Hitchwiki](https://github.com/Hitchwiki/hitchwiki) MediaWiki setup.
+Internal project extension to use at [Hitchwiki.org](http://hitchwiki.org), part of our [MediaWiki setup](https://github.com/Hitchwiki/hitchwiki).
 
 ## Install manually
 
