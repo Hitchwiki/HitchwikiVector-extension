@@ -25,16 +25,15 @@ class HitchwikiHooks {
 	}
 
 	/**
-	* Remove footer icons for MW and SMW
-	* Handler for BeforePageDisplay
+	* Disable powered by footer icons
+	* Handled at hook BeforePageDisplay
 	* @param OutputPage $out
 	* @param Skin $skin
 	* @return bool
 	*/
 	static function modifyFooterIcons( &$out, &$skin ) {
 		global $wgFooterIcons;
-		unset($wgFooterIcons["poweredby"]["mediawiki"]);
-		unset($wgFooterIcons["poweredby"]["semanticmediawiki"]);
+		unset($wgFooterIcons["poweredby"]);
 		return true;
 	}
 
