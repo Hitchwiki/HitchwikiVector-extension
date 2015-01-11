@@ -1,0 +1,20 @@
+{
+  "name": "HWVector",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Hitchwiki/hitchwiki",
+  "authors": [
+    "Remigr <remiclaude@free.fr>",
+    "Mikael Korpela <mikael@ihminen.org>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.2.0"
+  }
+}
