@@ -46,10 +46,6 @@ div.vectorTabs, div#content {
  * Logo
  */
 #p-logo {
-	.background-image('images/hitchwiki-logo.png');
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	//.background-image-svg("images/@{name}.svg", 'images/@{name}.png');
 
 	// This will break the scrolling logo of VectorBeta Winter theme
 	position: fixed;
@@ -57,12 +53,25 @@ div.vectorTabs, div#content {
 	height: @header-height;
 	border-bottom: 1px solid @hw-orange-border;
 
-	// Original icon was here
-	// Consider removing image with JS so we could keep the link?
+	// Note that a has already inline background-image set from Vector template
 	a {
-		display: none;
+		display: block;
+		width: 100%;
+		height: 100%;
+
+	  .background-image('images/hitchwiki-logo.png');
+	  //.background-image-svg("images/@{name}.svg", 'images/@{name}.png');
+	  background-repeat: no-repeat;
+	  background-position: center center;
 	}
 }
+.mw-scrolled #p-logo a {
+  height: 100%;
+  width: 100%;
+  background-size: auto auto;
+  background-position: center center;
+}
+
 // This will break the scrolling logo of VectorBeta Winter theme
 div#mw-panel {
 	top: @header-height;
