@@ -35,9 +35,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'font-awesome',
 		),
-		'scripts' => array(
-			'resources/hitchwiki.js',
-		),
 		'styles' => array(
 			'resources/hitchwiki.less',
 		),
