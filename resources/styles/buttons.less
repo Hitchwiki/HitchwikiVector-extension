@@ -7,3 +7,18 @@
   border: 1px solid @hw-orange-border;
 	color: #fff;//@hw-orange-text;
 }
+
+// Make Default buttons orange
+//button,
+//input[type='submit'],
+input#wpDiff,
+input#wpPreview,
+input#wpSave {
+  margin-right: 10px;
+  .hwbutton();
+}
+// Some buttons are actually gray...
+input#wpDiff,
+input#wpPreview {
+  .hwbutton-secondary();
+}

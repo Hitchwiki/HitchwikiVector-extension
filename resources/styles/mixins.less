@@ -3,4 +3,33 @@
 @import "mediawiki.mixins";
 
 // Hitchwiki mixins:
-// ...
+
+.hwbutton {
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 15px;
+  border: 0;
+  background: @hw-orange;
+  color: @hw-orange-text;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  &:focus,
+  &:hover,
+  &:active {
+    background: lighten(@hw-orange, 5%);
+  }
+}
+
+
+.hwbutton-secondary {
+  background: #ccc;
+  color: #555;
+  font-weight: normal;
+  text-transform: none;
+  &:focus,
+  &:hover,
+  &:active {
+    background: lighten(#ccc, 5%);
+  }
+}
