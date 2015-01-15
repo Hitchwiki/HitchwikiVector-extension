@@ -11,8 +11,57 @@ html, body {
 }
 
 div#mw-panel {
-	width: 9.5em;
+	width: @sidebar-width;
 	background: #eee;
+  padding-left: 0;
+  padding-right: 0;
+	text-align: center;
+	color: #333;
+	a {
+		display: block;
+		&,
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+  	  color: #333;
+			text-decoration: none;
+		}
+	}
+	h3 {
+		display: none;
+	}
+	div.portal {
+		margin: 0;
+		padding: 0;
+		background-image: none;
+		div.body {
+			margin: 0;
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+          line-height: 1.125em;
+          margin: 0;
+          padding: 0.5em 0;
+          font-size: 0.75em;
+          word-wrap: break-word;
+        }
+			}
+		}
+  }
+}
+@media screen and (min-width: 982px) {
+  #mw-panel {
+		//...
+  }
+}
+@media screen and (min-width: 768px) {
+  div#footer,
+	#left-navigation,
+	div#content {
+  	margin-left: @sidebar-width;
+  }
 }
 
 .mw-body {
@@ -83,6 +132,15 @@ div#mw-panel {
   }
 }
 
+/*
+ * UI Buttons / toolbars
+ */
+.mw-ui-button.mw-ui-progressive,
+.mw-ui-button.mw-ui-primary {
+  background: @hw-orange;
+  border: 1px solid @hw-orange-border;
+	color: #fff;//@hw-orange-text;
+}
 
 /*
  * Sidebar
