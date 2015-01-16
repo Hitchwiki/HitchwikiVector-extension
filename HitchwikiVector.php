@@ -36,7 +36,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'font-awesome',
 		),
 		'styles' => array(
-			'resources/hitchwiki.less',
+			'resources/styles/ext.HitchwikiVector.less',
 		),
 		// Other ensures this loads after the Vector skin styles
 		'group' => 'other',
