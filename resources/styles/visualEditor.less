@@ -1,0 +1,22 @@
+/*
+ * VisualEditor
+ */
+
+.oo-ui-toolbar-bar {
+  background: #f7f7f7;
+  // Fix left padding problem
+  margin-left: -24px;
+}
+
+// Make sure toolbar won't get sticky under our sticky header
+.ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
+  top: (@header-height + 1); //+1px for the border
+}
+
+// Make VE-Save button orange
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+  background-color: @hw-orange;
+  border-color: @hw-orange-border;
+  color: @hw-orange-text;
+  text-transform: uppercase;
+}
