@@ -17,6 +17,29 @@
 
 .hw-form-semantics {
   overflow: hidden;
+  .hw-form-semantics-section {
+    margin: 2px;
+    padding: 0;
+    font-weight: normal;
+    color: #999;
+    font-size: 18px;
+  }
+  .mw-collapsible-toggle {
+    float: left;
+    margin: 10px 10px 10px 0;
+    a {
+      .hwbutton();
+      .hwbutton-secondary();
+      .hwbutton-small();
+    }
+    .mw-collapsible-bracket {
+      display: none;
+    }
+    &.mw-collapsible-toggle-expanded,
+    &.mw-collapsible-toggle-collapsed {
+      text-decoration: none;
+    }
+  }
 }
 
 .hw-form-location {
