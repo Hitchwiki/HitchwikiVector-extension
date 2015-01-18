@@ -25,16 +25,7 @@ $wgMessagesDirs['HitchwikiVector'] = __DIR__ . '/i18n';
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
 
-	'font-awesome' => $wgHWResourceBoilerplate + array(
-		'styles' => array(
-			'resources/vendor/font-awesome/css/font-awesome.css',
-		),
-	),
-
 	'skins.vector.hitchwiki' => $wgHWResourceBoilerplate + array(
-		'dependencies' => array(
-			'font-awesome',
-		),
 		'styles' => array(
 			'resources/styles/ext.HitchwikiVector.less',
 		),
