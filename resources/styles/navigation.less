@@ -36,27 +36,28 @@ div#mw-panel {
 				li {
           line-height: 1.125em;
           margin: 0;
-          padding: 0.6em 0 0.4em 0;
-          font-size: 0.7em;
+          padding: 0.4em 0.1em 0.6em 0.1em;
+          font-size: 0.68em;
           word-wrap: break-word;
 					text-align: center;
 					a {
+    				.transition(color 0.5s);
 						&:link,
 						&:visited {
-						  color: #999;
+						  color: #7a7a7a;
 						}
 						&:hover,
 						&:active {
-						  color: lighten(#999, 10%);
+						  color: lighten(#7a7a7a, 15%);
 						}
 						&:before {
 				       .fa-icon();
 							clear: both;
 							display: block;
-					  	font-size: 17px;
+					  	font-size: 20px;
 					  	padding-bottom: 2px;
 					  }
-					 }
+					}
         }
 			}
 		}
