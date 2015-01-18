@@ -1,11 +1,3 @@
-.mw-special-FormStart {
-  input[name='page_name'] {
-    font-size: 22px;
-    line-height: 22px;
-    padding: 5px;
-  }
-}
-
 .editOptions {
   font-size: 12px;
   color: #7a7a7a;
@@ -67,6 +59,31 @@
   padding: 3px;
   font-size: 15px;
   line-height: 15px;
+}
+
+// Form specal pages
+body.page-Form_City,
+body.page-Form_Country {
+  &.action-view {
+    #firstHeading {
+      display: none;
+    }
+  }
+  input[name='page_name'] {
+    font-size: 22px;
+    line-height: 22px;
+    padding: 5px;
+  }
+  input[type='submit'] {
+    .hwbutton();
+  }
+}
+.mw-special-FormStart {
+  input[name='page_name'] {
+    font-size: 22px;
+    line-height: 22px;
+    padding: 5px;
+  }
 }
 
 
