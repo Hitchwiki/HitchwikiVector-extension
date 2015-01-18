@@ -16,7 +16,9 @@
 }
 
 .hw-form-semantics {
+  border-top: 0; // this box is directly under wikiEditor box which already has boottom-border instead
   overflow: hidden;
+  clear: both;
   .hw-form-semantics-section {
     margin: 2px;
     padding: 0;
@@ -39,6 +41,20 @@
     &.mw-collapsible-toggle-collapsed {
       text-decoration: none;
     }
+  }
+  .mw-collapsible-content {
+    margin-top: 20px;
+  }
+  // These would be clear:left|right by default.
+  // That sucks if we want to stack content next to each other.
+  // Take care they're wrapped into overflow:hidden though!
+  div.tright,
+  div.floatright,
+  table.floatright,
+  div.tleft,
+  div.floatleft,
+  table.floatleft {
+    clear: none;
   }
 }
 
