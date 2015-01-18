@@ -38,6 +38,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'resources/styles/ext.HitchwikiVector.less',
 		),
+		'scripts' => array(
+			'resources/js/ext.HitchwikiVector.js',
+		),
 		// Other ensures this loads after the Vector skin styles
 		'group' => 'other',
 		//'position' => 'bottom',
