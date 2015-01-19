@@ -5,15 +5,19 @@
 // Hitchwiki mixins:
 
 .hwbutton {
+  display: inline-block;
   padding: 10px 15px;
-  font-size: 14px;
-  line-height: 15px;
   border: 0;
   background: @hw-orange;
-  color: @hw-orange-text;
-  text-transform: uppercase;
-  font-weight: bold;
   cursor: pointer;
+  &, a {
+    font-size: 14px;
+    line-height: 15px;
+    color: @hw-orange-text;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+  }
   &:focus,
   &:hover,
   &:active {
@@ -24,9 +28,12 @@
 
 .hwbutton-secondary {
   background: #ccc;
-  color: #555;
-  font-weight: normal;
-  text-transform: none;
+  &, a {
+    color: #555;
+    font-weight: normal;
+    text-transform: none;
+    text-decoration: none;
+  }
   &:focus,
   &:hover,
   &:active {
