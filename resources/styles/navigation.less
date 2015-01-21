@@ -26,6 +26,9 @@ div#mw-panel {
 		margin: 0;
 		padding: 0;
 		background-image: none;
+		&.first div.body {
+			margin-left: 0;
+		}
 		div.body {
 			margin: 0;
 			ul {
@@ -34,10 +37,14 @@ div#mw-panel {
 				li {
           line-height: 1.125em;
           margin: 0;
-          padding: 0.4em 0.1em 0.6em 0.1em;
           font-size: 0.68em;
           word-wrap: break-word;
-					text-align: center;
+          padding: 0.4em 0.1em 0.6em 0.1em;
+					text-align: left;
+					@media (min-width: 480px) {
+          	padding: 0.2em 0 0.2em 0;
+				  	text-align: center;
+					}
 					a {
     				.transition(color 0.5s);
 						&:link,
@@ -49,11 +56,14 @@ div#mw-panel {
 						  color: lighten(#7a7a7a, 15%);
 						}
 						&:before {
-				       .fa-icon();
-							clear: both;
-							display: block;
-					  	font-size: 20px;
-					  	padding-bottom: 2px;
+				      .fa-icon();
+							padding: 0 10px 0 0;
+				      @media (min-width: 480px) {
+							  clear: both;
+							  display: block;
+					  	  font-size: 20px;
+					  	  padding: 0 0 2px 0;
+							}
 					  }
 					}
         }
@@ -81,6 +91,11 @@ div#mw-panel {
 		 content: @fa-var-clock-o;
 	}
 
+}
+
+// Mobile
+.mw-navigation-enabled div#mw-panel div.portal div.body ul li a {
+	padding-left: 10px;
 }
 
 // Show navi items bold when on their pages
