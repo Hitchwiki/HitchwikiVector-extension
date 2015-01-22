@@ -5,7 +5,7 @@ Internal project extension to use at [Hitchwiki.org](http://hitchwiki.org), part
 
 ## Install manually
 
-Note that normal Hitchwiki takes care of installing this extension.
+Note that Hitchwiki repository install script takes care of installing this extension.
 
 Clone under `extensions`:
 ```bash
