@@ -10,7 +10,7 @@ $wgHWResourceBoilerplate = array(
 );
 
 $wgExtensionCredits['skin'][] = array(
-	'author' => array( 'Mikael Korpela', 'Rémi Claude' ),
+	'author' => array( 'Mikael Korpela', 'Rémi Claude', 'Olexandr Melnyk'),
 	'description' => "Hitchwiki skin extension to turn MediaWiki's Vector skin awesomly orange.",
 	'descriptionmsg' => 'hitchwiki-desc',
 	'name' => 'HitchwikiVector',
