@@ -62,12 +62,6 @@ div.vectorTabs, div#content {
     background-position: center center;
   }
 }
-.mw-scrolled #p-logo a {
-  height: 100%;
-  width: 100%;
-  background-size: auto auto;
-  background-position: center center;
-}
 
 // This will break the scrolling logo of VectorBeta Winter theme
 div#mw-panel {
@@ -78,6 +72,16 @@ div#mw-panel {
 .mw-scrolled {
   #p-logo {
     border-bottom-color: @hw-orange-border;
+    @media screen and (min-width: 768px) {
+      width: 12em;
+      height: @header-height;//3.4em;
+    }
+    a {
+      height: 100%;
+      width: 100%;
+      background-size: auto auto;
+      background-position: center center;
+    }
   }
 }
 
