@@ -1,7 +1,20 @@
-
 /*
- * Color theme
+ * Commons
  */
+
+* {
+  .box-sizing(border-box);
+	&:before,
+	&:after {
+	  .box-sizing(border-box);
+	}
+}
+
 html, body {
-	background-color: #eee;
+  background-color: #eee;
+  margin: 0;
+}
+
+body.skin-vector {
+	background: #eee;
 }
