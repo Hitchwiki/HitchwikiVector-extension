@@ -7,7 +7,21 @@
   border-collapse: separate;
 	float: right;
   margin: 0 0 20px 20px;
-
+  .fa {
+    margin-right: 5px;
+  }
+  .infobox-h1-secondary {
+    font-weight: normal;
+    &, a {
+      color: #888;
+    }
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: lighten(#888, 10%);
+      cursor: pointer;
+    }
+  }
   .mw-collapsible-toggle {
     .hwbutton();
     .hwbutton-secondary();
