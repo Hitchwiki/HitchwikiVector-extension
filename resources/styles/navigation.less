@@ -90,6 +90,17 @@ div#mw-panel {
 	#n-recentchanges a:before {
 		 content: @fa-var-clock-o;
 	}
+	#n-createaccount a:before {
+		 content: @fa-var-arrow-circle-o-up;
+	}
+	#n-login a:before {
+		 content: @fa-var-arrow-circle-o-right;
+		 //content: @fa-var-sign-in;
+	}
+	#n-createaccount,
+	#n-login {
+		background: darken(#eee, 3%);
+	}
 
 }
 
@@ -107,6 +118,23 @@ div#mw-panel {
 .page-Contact #n-Contact-us a {
 	font-weight: bold;
 }
+
+// Hide content depending if user is logged in/out
+// The class is set from ext.HitchwikiVector.js
+body.hw-user-nonlogged {
+	#n-New-spot,
+	#n-New-city,
+	#n-Add-photo {
+		display: none;
+	}
+}
+body.hw-user-logged {
+	#n-login,
+	#n-createaccount {
+		display: none;
+	}
+}
+
 /*
 @media screen and (min-width: 982px) {
   #mw-panel {

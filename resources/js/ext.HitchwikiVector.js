@@ -8,11 +8,13 @@
 
     // Don't allow adding new content for non logged in users
     // wgUserId returns null when not logged in
-    if(!mw.config.get('wgUserId')) {
-	    $("#n-New-spot").hide();
-		  $("#n-New-city").hide();
-		  $("#n-Add-photo").hide();
+		// Styles regarding this are under navigation.less
+    if(mw.config.get('wgUserId')) {
+	    $("body").addClass("hw-user-logged");
 	  }
+		else {
+	    $("body").addClass("hw-user-nonlogged");
+		}
 
 	} );
 
