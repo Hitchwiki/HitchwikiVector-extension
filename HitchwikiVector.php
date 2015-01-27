@@ -19,7 +19,8 @@ $wgExtensionCredits['skin'][] = array(
 	'license-name' => 'MIT'
 );
 
-$wgAutoloadClasses['HitchwikiHooks'] = __DIR__ . '/HitchwikiVector.hooks.php';
+$wgAutoloadClasses['HitchwikiVectorTagLanguages'] = __DIR__ . '/includes/tagLanguages.php';
+$wgAutoloadClasses['HitchwikiVectorHooks'] = __DIR__ . '/HitchwikiVector.hooks.php';
 
 $wgMessagesDirs['HitchwikiVector'] = __DIR__ . '/i18n';
 
@@ -40,5 +41,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 ) );
 
-$wgHooks['BeforePageDisplay'][] = 'HitchwikiHooks::onBeforePageDisplay';
-$wgHooks['BeforePageDisplay'][] = 'HitchwikiHooks::modifyFooterIcons';
+// Attach hooks
+$wgHooks['BeforePageDisplay'][] = 'HitchwikiVectorHooks::onBeforePageDisplay';
+$wgHooks['BeforePageDisplay'][] = 'HitchwikiVectorHooks::modifyFooterIcons';
+$wgHooks['ParserFirstCallInit'][] = 'HitchwikiVectorHooks::languagesParserInit';

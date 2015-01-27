@@ -1,6 +1,6 @@
 <?php
 
-class HitchwikiHooks {
+class HitchwikiVectorHooks {
 
 	/**
 	 * Handler for BeforePageDisplay
@@ -35,6 +35,25 @@ class HitchwikiHooks {
 		global $wgFooterIcons;
 		unset($wgFooterIcons["poweredby"]);
 		unset($wgFooterIcons["copyright"]);
+		return true;
+	}
+
+	/*
+	 * Hook into the parser to process <hw-languages> template tag
+	 *
+	 * Lists all the Hitchwiki network languages from $hwLangConfig global variable
+	 * https://www.mediawiki.org/wiki/Manual:Tag_extensions
+	 */
+	static function languagesParserInit( Parser $parser ) {
+
+	  // When the parser sees the <hw-languages> tag, it executes
+		// the hwLanguagesRender function (see below)
+		//$parser->setHook( 'languages', 'HitchwikiVectorTagLanguages::languagesRender' );
+		$HitchwikiVectorTagLanguages = new HitchwikiVectorTagLanguages();
+		$parser->setHook( 'hw-languages', 'HitchwikiVectorTagLanguages::languagesRender' );
+
+	  // Always return true from this function. The return value does not denote
+	  // success or otherwise have meaning - it just must always be true.
 		return true;
 	}
 
