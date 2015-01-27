@@ -34,6 +34,7 @@ class HitchwikiHooks {
 	static function modifyFooterIcons( &$out, &$skin ) {
 		global $wgFooterIcons;
 		unset($wgFooterIcons["poweredby"]);
+		unset($wgFooterIcons["copyright"]);
 		return true;
 	}
 
