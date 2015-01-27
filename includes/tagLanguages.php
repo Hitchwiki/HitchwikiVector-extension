@@ -38,7 +38,25 @@
  *         )
  * )
  */
-
+/*
+ * @TODO: translations for "x articles"
+ * en = "%d articles"
+ * de = "%d Artikel"
+ * fr = "%d articles"
+ * es = "%d artículos"
+ * tr = "%d makale"
+ * pt = "%d artigos"
+ * pl = "%d artykułów"
+ * ru = "%d статей"
+ * fi = "%d artikkelia"
+ * nl = "%d articles"
+ * lt = "%d straipsniai"
+ * ro = "%d articole"
+ * it = "%d articoli"
+ * he = "%d מאמרים"
+ * bg = "%d статии"
+ * zh = "%d 條目"
+ */
 
 class HitchwikiVectorTagLanguages {
 
@@ -59,11 +77,9 @@ class HitchwikiVectorTagLanguages {
 			// If it's NOT in Babylist
 			if(!in_array($langCode, $hwLangConfig['settings']['baby'])) {
 
-				$articlesFormat = (isset($hwLangConfig['articles'][$langCode])) ? $hwLangConfig['articles'][$langCode] : '%d articles';
-
 				$languages .= '<li>';
 				$languages .= '<a href="/'.$langCode.'">'.$langName.'</a>';
-				$languages .= '<span class="hw-languages-articles">' . sprintf($articlesFormat, 0) . '</span>';
+				$languages .= '<span class="hw-languages-articles">' . sprintf('%d articles', 0) . '</span>';
 				$languages .= '</li>';
 			}
 		}
@@ -77,11 +93,9 @@ class HitchwikiVectorTagLanguages {
 			// If it IS in Babylist
 			if(in_array($langCode, $hwLangConfig['settings']['baby'])) {
 
-				$articlesFormat = (isset($hwLangConfig['articles'][$langCode])) ? $hwLangConfig['articles'][$langCode] : '%d articles';
-
 				$languages .= '<li>';
 				$languages .= '<a href="/'.$langCode.'">'.$langName.'</a>';
-				$languages .= '<span class="hw-languages-articles">(' . sprintf($articlesFormat, 0) . ')</span>';
+				$languages .= '<span class="hw-languages-articles">(' . sprintf('%d articles', 0) . ')</span>';
 				$languages .= '</li>';
 			}
 		}
