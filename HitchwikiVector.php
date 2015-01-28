@@ -33,6 +33,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'resources/js/ext.HitchwikiVector.js',
 			'resources/js/ext.HitchwikiVector.languages.js',
+			'resources/js/ext.HitchwikiVector.SpecialPageBlockUser.js',
 		),
 		// Other ensures this loads after the Vector skin styles
 		'group' => 'other',
