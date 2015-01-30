@@ -1,5 +1,11 @@
 #mw-head {
   height: @header-height;
+  a {
+    &,
+    &:visited {
+      color: @hw-orange-text;
+    }
+  }
 }
 
 
@@ -8,7 +14,9 @@
   background-color: @hw-orange;
   color: @hw-orange-text;
 }
-
+.hw-user-nonlogged #p-personal {
+  top: 0.8em;
+}
 #p-search {
   top: 0;
   @media screen and (min-width: 768px) {
