@@ -14,8 +14,26 @@
   background-color: @hw-orange;
   color: @hw-orange-text;
 }
-.hw-user-nonlogged #p-personal {
-  top: 0.8em;
+.hw-user-nonlogged {
+  #p-personal {
+    top: 0.8em;
+  }
+  #pt-login {
+    margin-top: 0;
+    a {
+      display: inline-block;
+      padding: 1px 10px 0 10px;
+      line-height: 20px;
+      text-transform: uppercase;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: bold;
+      background: @hw-orange-border;
+      &:hover {
+        background: lighten(@hw-orange-border, 5%);
+      }
+    }
+  }
 }
 #p-search {
   top: 0;
