@@ -7,6 +7,12 @@
 
   $languages.insertAfter("#firstHeading");
 
+
+
   $languagesPortal.remove();
+
+  if(mw.config.exists( 'wgUserLanguage' )) {
+    $languages.find( ".interwiki-" + mw.config.get('wgUserLanguage') ).addClass("hw-userlang");
+  }
 
 }( mediaWiki, jQuery ) );
