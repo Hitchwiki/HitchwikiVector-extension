@@ -1,18 +1,27 @@
 // Modify languages menu
 ( function ( mw, $ ) {
 
-  $languagesPortal = $("#p-lang");
+  if(mw.config.get('wgAction') == 'view') {
 
-  $languages = $languagesPortal.find("ul").addClass("hw-interwiki");
+    $languagesPortal = $("#p-lang");
 
-  $languages.insertAfter("#firstHeading");
+    if($languagesPortal.length) {
 
+      $languages = $languagesPortal.find("ul").addClass("hw-interwiki");
 
+      // Add languages under the main title on other pages except main page
+      if(mw.config.get('wgPageName') != 'Main_Page') {
+        $languages.insertAfter("#firstHeading");
+      }
 
-  $languagesPortal.remove();
+      $languagesPortal.remove();
 
-  if(mw.config.exists( 'wgUserLanguage' )) {
-    $languages.find( ".interwiki-" + mw.config.get('wgUserLanguage') ).addClass("hw-userlang");
+      if(mw.config.exists( 'wgUserLanguage' )) {
+        $languages.find( ".interwiki-" + mw.config.get('wgUserLanguage') ).addClass("hw-userlang");
+      }
+
+    }
+
   }
 
 }( mediaWiki, jQuery ) );
