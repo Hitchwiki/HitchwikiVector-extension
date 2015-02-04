@@ -1,7 +1,8 @@
 <?php
 /*
- * Hitchwiki extension
- * Extends Vector template
+ * Hitchwiki Skin extension
+ * - Extends Vector template
+ * - Extends VectorBeta extension
  */
 
 $wgHWResourceBoilerplate = array(
