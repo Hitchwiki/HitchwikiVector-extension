@@ -21,7 +21,7 @@
     "source": "https://github.com/Hitchwiki/HitchwikiVector-extension"
   },
   "scripts": {
-    "post-update-cmd": "bower update --config.interactive=false",
-    "post-install-cmd": "bower install --config.interactive=false"
+    "post-update-cmd": "bower update --config.interactive=false --allow-root",
+    "post-install-cmd": "bower install --config.interactive=false --allow-root"
   }
 }
