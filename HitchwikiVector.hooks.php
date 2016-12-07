@@ -33,8 +33,11 @@ class HitchwikiVectorHooks {
 	*/
 	static function modifyFooterIcons( &$out, &$skin ) {
 		global $wgFooterIcons;
-		unset($wgFooterIcons["poweredby"]);
-		unset($wgFooterIcons["copyright"]);
+    // Don't `unset()` these, as it would cause warning:
+    // "PHP Notice:  Undefined index: copyright in /usr/share/webapps/mediawiki/includes/skins/Skin.php"
+    // https://www.mediawiki.org/w/index.php?title=Topic:T81fd4ovtrvakxus&topic_showPostId=t81fd4oxdy9z16jo#flow-post-t81fd4oxdy9z16jo
+		$wgFooterIcons["poweredby"] = null;
+		$wgFooterIcons["copyright"] = null;
 		return true;
 	}
 
