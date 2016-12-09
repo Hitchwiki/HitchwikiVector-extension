@@ -1,24 +1,49 @@
 /*
  * UI Buttons / toolbars
  */
+
+.mw-main-edit-button,
 .mw-ui-button.mw-ui-progressive,
 .mw-ui-button.mw-ui-primary {
   background: @hw-orange;
   border: 1px solid @hw-orange-border;
-  color: @hw-orange-text;
+  &, a {
+    text-shadow: none;
+    color: @hw-orange-text;
+    text-decoration: none;
+  }
+  &:hover {
+    background: darken(@hw-orange, 5%);
+    border: 1px solid darken(@hw-orange, 5%);
+  }
+  &:focus,
+  &:active {
+    background: darken(@hw-orange, 7%);
+    border: 1px solid darken(@hw-orange, 7%);
+  }
   // Sometimes buttons have "more" menu (with white background):
   // don't mess up color of links inside drop menu.
   .mw-more-menu {
     &, a {
       color: #888;
     }
+    &:focus,
+    &:active,
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 
-// Edit button dropdown tweaks
+// Edit button + dropdown tweaks
 .mw-main-edit-button {
   .mw-more-icon {
     top: 0;
+    height: 26px;
+    border-color: @hw-orange-border;
+    &:hover .mw-more-menu {
+      top: 30px;
+    }
   }
 }
 
