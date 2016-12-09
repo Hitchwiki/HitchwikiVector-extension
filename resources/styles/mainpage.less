@@ -9,7 +9,7 @@
     background: #f1eede;
     border-bottom: 2px solid #d0caa8;
     color: #2d1a09;
-    margin: -36px -24px 0 -48px;
+    margin: -40px -24px 0 -48px;
     padding: 30px 48px;
   }
   .hw-mainpage-title {
@@ -53,6 +53,7 @@
     display: none;
   }
 
+  // Edit toolbar on main page is less visible
   #mw-page-actions,
   .mw-main-edit-button {
     opacity: 0.5;
@@ -60,6 +61,15 @@
     &:active,
     &:hover {
       opacity: 1;
+    }
+  }
+
+  // Edit button on main page is less visible
+  .mw-main-edit-button {
+    background: #ccc;
+    border-color: #888;
+    * {
+      color: #333;
     }
   }
 
