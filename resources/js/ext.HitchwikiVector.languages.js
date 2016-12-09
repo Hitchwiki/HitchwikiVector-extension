@@ -16,6 +16,7 @@
 
       $languagesPortal.remove();
 
+      // Highlight users own language
       if(mw.config.exists( 'wgUserLanguage' )) {
         $languages.find( '.interwiki-' + mw.config.get('wgUserLanguage') ).addClass('hw-userlang');
       }
