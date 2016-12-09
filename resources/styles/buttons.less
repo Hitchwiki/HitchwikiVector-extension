@@ -5,10 +5,26 @@
 .mw-ui-button.mw-ui-primary {
   background: @hw-orange;
   border: 1px solid @hw-orange-border;
-	color: #fff;//@hw-orange-text;
+	color: @hw-orange-text;
+  // Sometimes buttons have "more" menu (with white background):
+  // don't mess up color of links inside drop menu.
+  .mw-more-menu {
+    &, a {
+      color: #888;
+    }
+  }
 }
 
-// Make Default buttons orange
+// Edit button dropdown tweaks
+.mw-main-edit-button {
+  .mw-more-icon {
+    top: 0;
+  }
+}
+
+
+// Give Default buttons HW appearance
+// These buttons will appear orange (Dec 2016)
 //button,
 //input[type='submit'],
 .patrollink,
