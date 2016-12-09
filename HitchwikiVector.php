@@ -31,6 +31,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
     'styles' => array(
       'resources/styles/ext.HitchwikiVector.less',
     ),
+    'dependencies' => array(
+      'mediawiki.page.startup',
+      'mediawiki.util'
+    ),
     'scripts' => array(
       'resources/js/ext.HitchwikiVector.js',
       'resources/js/ext.HitchwikiVector.languages.js',
