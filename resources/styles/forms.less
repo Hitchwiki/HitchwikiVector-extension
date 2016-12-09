@@ -25,8 +25,11 @@
     margin: 5px 10px 5px 0;
     a {
       .hwbutton();
-      .hwbutton-secondary();
       .hwbutton-small();
+    }
+    &.mw-collapsible-toggle-expanded a {
+      // On open state button is less visible:
+      .hwbutton-secondary();
     }
     .mw-collapsible-bracket {
       display: none;
