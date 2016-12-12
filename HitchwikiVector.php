@@ -33,10 +33,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
     ),
     'dependencies' => array(
       'mediawiki.page.startup',
-      'mediawiki.util'
+      'mediawiki.util',
+      'oojs-ui-core',
+      'oojs-ui-widgets'
     ),
     'scripts' => array(
       'resources/js/ext.HitchwikiVector.js',
+      'resources/js/ext.HitchwikiVector.navigation.js',
       'resources/js/ext.HitchwikiVector.languages.js',
       'resources/js/ext.HitchwikiVector.SpecialPageBlockUser.js',
     ),
