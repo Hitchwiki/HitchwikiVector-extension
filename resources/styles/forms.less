@@ -86,6 +86,16 @@ body.page-Form_Area {
   }
 }
 
+.formtable {
+  // Form buttons are normally flowing next to each other,
+  // this stacks them up
+  .radioButtonItem,
+  .radioButtonSpan {
+    display: block;
+    clear: both;
+  }
+}
+
 
 // For some odd reason, these had fixed min-style:600px
 // That sucks. Removing it at HitchwikiVector/resources/js/ext.HitchwikiVector.js
