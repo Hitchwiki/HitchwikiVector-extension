@@ -17,7 +17,7 @@
     }
 
     // Move Special buttons to the footer at front page
-    if(mw.config.get('wgPageName') == 'Main_Page') {
+    if(mw.config.get('wgPageName') === 'Main_Page') {
       $('#mw-page-actions').insertAfter('#mw-content-text');
       $('.mw-main-edit-button').insertAfter('#mw-content-text');
     }
